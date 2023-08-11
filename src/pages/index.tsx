@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <Container className='bg-orange-500 h-96 flex items-center justify-center '>
       <Row alignmentY='center' alignmentX='center' className='bg-red-500 h-80'>
-        <Col className='sm:w-3/4 md:w-1/4 bg-green-500 h-20  '>
+        <Col className='sm:w-3/4 md:w-1/4 bg-green-500'>
           <div className=''>
             <Image
               className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
