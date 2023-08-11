@@ -1,6 +1,9 @@
+// components
 import { Container } from '@/components/atoms/container';
 import { Row } from '@/components/atoms/row';
 import { Col } from '@/components/atoms/col';
+
+// nextui
 import { Button, Image } from '@nextui-org/react';
 
 // types
