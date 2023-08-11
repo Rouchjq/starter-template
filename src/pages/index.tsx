@@ -1,9 +1,15 @@
 import { Container } from '@/components/atoms/container';
 import { Row } from '@/components/atoms/row';
 import { Col } from '@/components/atoms/col';
-import { Image } from '@nextui-org/react';
+import { Button, Image } from '@nextui-org/react';
 
-export default function Home() {
+// types
+import { NextPage } from 'next';
+import { toast } from 'react-toastify';
+
+const notify = () => toast.error('Wow so easy !');
+
+const Home: NextPage = () => {
   return (
     <Container className='bg-orange-500 h-96 flex items-center justify-center '>
       <Row alignmentY='center' alignmentX='center' className='bg-red-500 h-80'>
@@ -54,7 +60,12 @@ export default function Home() {
             />
           </div>
         </Col>
+        <Col>
+          <Button onClick={notify}>Toast</Button>
+        </Col>
       </Row>
     </Container>
   );
-}
+};
+
+export default Home;
