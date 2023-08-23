@@ -1,6 +1,3 @@
-// main tools
-import clsx from 'clsx';
-
 // types
 import { FC, ReactNode } from 'react';
 
@@ -17,14 +14,12 @@ export const Col: FC<ColProps> = ({
   width,
   spacing,
   children,
-
   className = '',
 }) => {
-  const colClasses = clsx(
-    auto ? 'flex-1' : width ? `w-${width}` : 'w-full',
-    spacing ? `px-${spacing}` : 'px-4',
-    className
-  );
-
+  const colClasses = `
+  ${auto ? 'flex-1' : width ?? 'w-full'}
+  ${spacing ? `px-${spacing}` : 'px-4'}
+  ${className}
+  `;
   return <div className={colClasses}>{children}</div>;
 };
