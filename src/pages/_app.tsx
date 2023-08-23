@@ -1,9 +1,21 @@
-import { NextUIProvider } from '@nextui-org/react';
-import '@/styles/globals.css';
-import type { AppProps } from 'next/app';
+// providers
 import { AppContextProvider } from '@/context/app/provider';
+import { NextUIProvider } from '@nextui-org/react';
 
-export default function App({ Component, pageProps }: AppProps) {
+// styles
+import '@/styles/variables.css';
+import '@/styles/globals.css';
+
+// types
+import type { AppProps } from 'next/app';
+import { NextPage } from 'next';
+
+type MyAppProps = {};
+
+const MyApp: NextPage<AppProps<MyAppProps>> = ({
+  Component,
+  pageProps: { ...pageProps },
+}) => {
   return (
     <NextUIProvider>
       <AppContextProvider>
@@ -11,4 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </AppContextProvider>
     </NextUIProvider>
   );
-}
+};
+
+export default MyApp;
