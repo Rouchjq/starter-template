@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: var(--black);
+  background-color: var(--green);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--black);
+    background-color: var(--green);
+  }
+}
