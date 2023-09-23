@@ -1,6 +1,6 @@
 // style
 import Head from 'next/head';
-import classes from './style.module.css';
+import classes from './styles.module.css';
 
 // types
 import { FC, ReactNode } from 'react';
